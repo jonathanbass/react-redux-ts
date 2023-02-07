@@ -1,0 +1,13 @@
+.students-display {
+    margin-top: 20px;
+
+    div.MuiGrid-item {
+        border: 1px solid black;
+        font-size: medium;
+        padding: 12px;
+
+        &.header {
+            background-color:  rgb(112, 76, 182);
+        }
+    }
+}

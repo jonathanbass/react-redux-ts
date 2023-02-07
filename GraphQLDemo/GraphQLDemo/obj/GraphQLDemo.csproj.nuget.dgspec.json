@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Dev\\GraphQLDemo\\GraphQLDemo\\GraphQLDemo.csproj": {}
+    "C:\\Dev\\react-redux-ts\\GraphQLDemo\\GraphQLDemo\\GraphQLDemo.csproj": {}
   },
   "projects": {
-    "C:\\Dev\\GraphQLDemo\\GraphQLDemo\\GraphQLDemo.csproj": {
+    "C:\\Dev\\react-redux-ts\\GraphQLDemo\\GraphQLDemo\\GraphQLDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Dev\\GraphQLDemo\\GraphQLDemo\\GraphQLDemo.csproj",
+        "projectUniqueName": "C:\\Dev\\react-redux-ts\\GraphQLDemo\\GraphQLDemo\\GraphQLDemo.csproj",
         "projectName": "GraphQLDemo",
-        "projectPath": "C:\\Dev\\GraphQLDemo\\GraphQLDemo\\GraphQLDemo.csproj",
+        "projectPath": "C:\\Dev\\react-redux-ts\\GraphQLDemo\\GraphQLDemo\\GraphQLDemo.csproj",
         "packagesPath": "C:\\Users\\jcb\\.nuget\\packages\\",
-        "outputPath": "C:\\Dev\\GraphQLDemo\\GraphQLDemo\\obj\\",
+        "outputPath": "C:\\Dev\\react-redux-ts\\GraphQLDemo\\GraphQLDemo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jcb\\AppData\\Roaming\\NuGet\\NuGet.Config",

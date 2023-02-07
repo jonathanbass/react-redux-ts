@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JRqmfSOZJokribEZw/Wc9AYbpluRdr9PSKnUhRw2QFr+21ilVdfHoYPLUNH6g6D55YIU2sbz4BK5F2NVkI9nDg==",
+  "dgSpecHash": "5bVHJS2aVmINdN5H1n5Q4ZHvohvFPnR7lD7y7NkS0fwG2tUBbY6XvBQg7oRR+4UPHKV3lbfwXdlfwzs94526TQ==",
   "success": true,
-  "projectFilePath": "C:\\Dev\\GraphQLDemo\\GraphQLDemo\\GraphQLDemo.csproj",
+  "projectFilePath": "C:\\Dev\\react-redux-ts\\GraphQLDemo\\GraphQLDemo\\GraphQLDemo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jcb\\.nuget\\packages\\autofixture\\4.17.0\\autofixture.4.17.0.nupkg.sha512",
     "C:\\Users\\jcb\\.nuget\\packages\\fare\\2.1.1\\fare.2.1.1.nupkg.sha512",
