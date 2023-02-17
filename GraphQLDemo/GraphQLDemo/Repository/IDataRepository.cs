@@ -4,14 +4,14 @@ namespace GraphQLDemo.Repository
 {
     public interface IDataRepository
     {
-        IEnumerable<Student> GetStudents();
+        Task<IEnumerable<Movie>> GetMovies();
 
-        Student GetStudent(int id);
+        Task<Movie> GetMovie(string id);
 
-        void UpdateStudent(Student student);
+        Task<Movie> UpdateMovie(Movie movie);
 
-        void DeleteStudent(int id);
+        Task DeleteMovie(string id);
 
-        void CreateStudent(Student student);
+        Task<Movie> CreateMovie(Movie movie);
     }
 }

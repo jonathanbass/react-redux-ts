@@ -1,3 +1,4 @@
+using GraphQLDemo.Models;
 using GraphQLDemo.Repository;
 using GraphQLDemo.Services;
 
@@ -5,7 +6,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddSingleton<IDataRepository, DataRepository>();
 builder.Services.AddGraphQLServer()
-    .AddQueryType<StudentService>()
+    .AddQueryType<MovieService>()
+    .AddMutationType<MutationType>()
     .AddFiltering();
 
 const string AllowLocalHost = "_allowLocalHost";
@@ -25,10 +27,6 @@ var app = builder.Build();
 app.UseCors(AllowLocalHost);
 
 app.UseRouting();
-
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapGraphQL();
-});
+app.MapGraphQL();
 
 app.Run();

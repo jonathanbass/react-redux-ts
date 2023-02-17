@@ -7,7 +7,8 @@
       "launchUrl": "graphql",
       "applicationUrl": "https://localhost:7098;http://localhost:5156",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "MONGODB_URI": "mongodb://localhost:27017"
       }
     }
   }

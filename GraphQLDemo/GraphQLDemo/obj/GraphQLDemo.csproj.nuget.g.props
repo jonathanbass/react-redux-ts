@@ -16,4 +16,8 @@
     <Import Project="$(NuGetPackageRoot)hotchocolate.data\12.16.0\build\HotChocolate.Data.props" Condition="Exists('$(NuGetPackageRoot)hotchocolate.data\12.16.0\build\HotChocolate.Data.props')" />
     <Import Project="$(NuGetPackageRoot)hotchocolate.aspnetcore\12.16.0\build\HotChocolate.AspNetCore.props" Condition="Exists('$(NuGetPackageRoot)hotchocolate.aspnetcore\12.16.0\build\HotChocolate.AspNetCore.props')" />
   </ImportGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgAWSSDK_Core Condition=" '$(PkgAWSSDK_Core)' == '' ">C:\Users\jcb\.nuget\packages\awssdk.core\3.7.100.14</PkgAWSSDK_Core>
+    <PkgAWSSDK_SecurityToken Condition=" '$(PkgAWSSDK_SecurityToken)' == '' ">C:\Users\jcb\.nuget\packages\awssdk.securitytoken\3.7.100.14</PkgAWSSDK_SecurityToken>
+  </PropertyGroup>
 </Project>

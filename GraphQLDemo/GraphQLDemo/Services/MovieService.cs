@@ -3,19 +3,19 @@ using GraphQLDemo.Repository;
 
 namespace GraphQLDemo.Services
 {
-    public class StudentService
+    public class MovieService
     {
         private readonly IDataRepository _dataRepository;
 
-        public StudentService(IDataRepository dataRepository)
+        public MovieService(IDataRepository dataRepository)
         {
             _dataRepository = dataRepository;
         }
 
         [UseFiltering]
-        public IEnumerable<Student> GetStudents()
+        public async Task<IEnumerable<Movie>> GetMovies()
         {
-            return _dataRepository.GetStudents();
+            return await _dataRepository.GetMovies();
         }
     }
 }

@@ -1,42 +1,52 @@
-﻿using AutoFixture;
-using GraphQLDemo.Models;
+﻿using GraphQLDemo.Models;
+using MongoDB.Driver;
 
 namespace GraphQLDemo.Repository
 {
     public class DataRepository : IDataRepository
     {
-        private readonly IEnumerable<Student> Students;
+        private IMongoCollection<Movie> movies;
 
         public DataRepository()
         {
-            var fixture = new Fixture();
-            fixture.CreateMany<Student>(10);
-            Students = fixture.CreateMany<Student>(10);
+            var connectionString = Environment.GetEnvironmentVariable("MONGODB_URI");
+            var client = new MongoClient(connectionString);
+            movies = client.GetDatabase("movies").GetCollection<Movie>("movies");
         }
 
-        public void CreateStudent(Student student)
+        public async Task<Movie> CreateMovie(Movie movie)
         {
-            throw new NotImplementedException();
+            await movies.InsertOneAsync(movie);
+            return movie;
         }
 
-        public void DeleteStudent(int id)
+        public async Task DeleteMovie(string id)
         {
-            throw new NotImplementedException();
+            await movies.DeleteOneAsync(m => m.Id == id);
         }
 
-        public Student GetStudent(int id)
+        public async Task<Movie> GetMovie(string id)
         {
-            throw new NotImplementedException();
+            return await Task.FromResult(new Movie { Id = id });
         }
 
-        public IEnumerable<Student> GetStudents()
+        public async Task<IEnumerable<Movie>> GetMovies()
         {
-            return Students;
+            var cursor = await movies.FindAsync(_ => true);
+            return await cursor.ToListAsync();
         }
 
-        public void UpdateStudent(Student student)
+        public async Task<Movie> UpdateMovie(Movie movie)
         {
-            throw new NotImplementedException();
+            var update = Builders<Movie>.Update
+                .Set("title", movie.Title)
+                .Set("year", movie.Year)
+                .Set("runtime", movie.Runtime)
+                .Set("genre", movie.Genre)
+                .Set("cast", movie.Cast);
+
+            await movies.UpdateOneAsync(m => m.Id == movie.Id, update);
+            return movie;
         }
     }
 }
